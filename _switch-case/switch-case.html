@@ -7,7 +7,13 @@
     <title>Switch Case</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <script>
-        var opcao = 1;
+        var opcao = prompt("Digite uma opção (1 ou 2):");
+
+        /* Transformando a var opcao em Int */
+        opcao = parseInt(opcao);
+
+        /* Transformando a var opcao em float */
+        opcao = parseFloat(opcao);
 
         switch (opcao) {
             case 1:
