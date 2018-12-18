@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eventos com Teclado</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        //onkeydown
+        function keydown() {
+            alert('Tecla pressionada (todas incluídas)');
+        }
+
+        //onkeypress
+        function keypress() {
+            alert('Tecla pressionada (exceção para alt, ctrl, esc, etc.)');
+        }
+
+        //onkeyup
+        function keyup() {
+            alert('teclao solta');
+        }
+    </script>
+</head>
+
+<body>
+
+    <h1>Eventos com o Teclado</h1>
+    <ul>
+        <li>onkeydown: acionado no momento em que uma tecla é pressionada (soltando ou não a tecla)</li>
+        <input type="text" onkeydown="keydown()">
+        <li>onkeypress: acionado no momento em que uma tecla é pressionada (soltando-a ou não), porém não captura todas as teclas, como por exemplo alt, ctrl, esc, shift, etc.</li>
+        <input type="text" onkeypress="keypress()">
+        <li>onkeyup: acionado no momento em que a tecla é solta</li>
+        <input type="text" onkeyup="keyup()">
+
+    </ul>
+
+</body>
+
+</html>
