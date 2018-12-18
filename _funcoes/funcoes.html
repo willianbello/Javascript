@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Funções</title>
+    <meta charset="UTF-8">
+    <script>
+        function calculaMedia(nota1, nota2) {
+            var resultado = nota1 + (nota2 * 2);
+            resultado = resultado / 3;
+
+            return resultado;
+        }
+
+        function resultado(resultado, mediaUniversidade) {
+            if (resultado >= mediaUniversidade) {
+                return "Aprovado";
+            }
+            return "reprovado";
+        }
+
+        function relatorio(nota1, nota2, mediaUniversidade, mediaFinal, resultado) {
+            document.write("<br>Nota G1: " + nota1);
+            document.write("<br>Nota G2: " + nota2);
+            document.write("<br>Media Final: " + mediaFinal + " (media da Universidade: " + mediaUniversidade + ")");
+            document.write("<br>Resultado Final: " + resultado);
+        }
+
+        var nota1 = prompt("Digita a nota G1");
+        var nota2 = prompt("Digite a nota G2");
+        var media; //resultado de g1 e g2;
+        var mediaUniversidade = 7; //media para passar (universidade);
+        var resultadoFinal; //resultado final (aprovado/reprovado);
+
+        nota1 = parseFloat(nota1);
+        nota2 = parseFloat(nota2);
+
+        media = calculaMedia(nota1, nota2);
+
+        resultadoFinal = resultado(media, mediaUniversidade);
+
+        relatorio(nota1, nota2, mediaUniversidade, media, resultadoFinal);
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>
