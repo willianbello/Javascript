@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eventos com elementos</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script>
+        //onfocus
+        function focado() {
+            console.log('O elemento foi focado');
+        }
+        //onblur
+        function desfocado() {
+            console.log('O elemento perdeu o foco');
+        }
+        //onchange
+        function modificado() {
+            console.log('O elemento foi modificado');
+        }
+    </script>
+</head>
+
+<body>
+
+    <input onfocus="focado()" onblur="desfocado()" type="text">
+
+    <select onchange="modificado()">
+        <option value="1">Primeira Opção</option>
+        <option value="2">Segunda Opção</option>
+    </select>
+</body>
+
+</html>
