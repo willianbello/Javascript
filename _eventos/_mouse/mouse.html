@@ -1,0 +1,69 @@
+<!DOCTYPE <!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Eventos com Mouse</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type="text/css">
+        div {
+            float: left;
+            margin: 20px;
+        }
+    </style>
+    <script>
+        //onclick
+        //ondblclick
+        //onmousedown
+        //onmouseover
+        //onmouseout
+        function clique() {
+            alert('Você deu um clique com o mouse esquerdo sobre esque elemento');
+        }
+
+        function duploClique() {
+            alert('Você deu duplo clique como o botão esquerdo do mouse sobre este elemento');
+        }
+
+        function soltandoBotaoOuNao() {
+            alert('Soltou o mouse ou não');
+        }
+
+        function mouseSobreOElemento() {
+            alert('O mouse está em cima do elemento');
+        }
+
+        function mouseSaiuDoElemento() {
+            alert('O mouse saiu do elemento');
+        }
+    </script>
+</head>
+
+<body>
+
+    <div onclick="clique()" style="background: #CCC; height: 150px; width: 150px; ">
+        <span>onclick</span>
+    </div>
+
+    <div ondblclick="duploClique()" style="background: #CCC; height: 150px; width: 150px; ">
+        <span>ondblclick</span>
+    </div>
+
+    <div onmousedown="soltandoBotaoOuNao()" style="background: #CCC; height: 150px; width: 150px; ">
+        <span>onmousedown</span>
+    </div>
+
+    <div onmouseover="mouseSobreOElemento()" id="" style="background: #CCC; height: 150px; width: 150px; ">
+        <span>onmouseover</span>
+    </div>
+
+    <div onmouseout="mouseSaiuDoElemento()" id="" style="background: #CCC; height: 150px; width: 150px; ">
+        <span>onmouseout</span>
+    </div>
+
+
+
+</body>
+
+</html>
