@@ -1,4 +1,7 @@
 var timerId = null; //variavel que armazena a chamada da função timeout
+var numCliques = 1; //variavel que armazena o numero de cliques
+numCliques = parseInt(numCliques);
+
 function iniciar() {
     dificuldade = document.getElementById('dificuldade').value;
     if (dificuldade == null || dificuldade == "") {
@@ -35,7 +38,7 @@ function iniciaJogo() {
     document.getElementById('tempo').innerHTML = tempoSegundos;
 
     //criação da quantidade de balões
-    var qtdBaloes = 80;
+    var qtdBaloes = 5;
 
     //UI baloes inteiros
     document.getElementById('uiBaloes').innerHTML = qtdBaloes;
@@ -86,7 +89,6 @@ function estourar(e) {
     //alterando imagem do balão para estourado
     document.getElementById(id_balao).src = "_imagens/balao_azul_pequeno_estourado.png";
     pontuacao(-1);
-
 }
 
 function pontuacao(acao) {
@@ -110,10 +112,16 @@ function pontuacao(acao) {
 function situacaoJogo(inteiros) {
     if (inteiros == 0) {
         alert('Parabéns, você venceu');
+        alert('Numeros de Cliques: ' + numCliques);
         pararJogo();
     }
 }
 
 function pararJogo() {
     clearTimeout(timerId);
+}
+
+function numeroClicks() {
+    var tela = document.getElementById('jogo');
+    tela.onmousedown = numCliques++;
 }
