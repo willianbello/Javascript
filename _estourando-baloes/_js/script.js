@@ -38,7 +38,7 @@ function iniciaJogo() {
     document.getElementById('tempo').innerHTML = tempoSegundos;
 
     //criação da quantidade de balões
-    var qtdBaloes = 5;
+    var qtdBaloes = 80;
 
     //UI baloes inteiros
     document.getElementById('uiBaloes').innerHTML = qtdBaloes;
